@@ -27,6 +27,8 @@ class SubmitAndRetrieveFile(
         self._journalist_stars_and_unstars_single_message()
         self._journalist_selects_all_sources_then_selects_none()
         self._journalist_downloads_message()
+        # Intentional error to confirm CI run fails if app test suite errors.
+        assert False
 
     def test_source_cancels_at_login_page(self):
         self._source_visits_source_homepage()
